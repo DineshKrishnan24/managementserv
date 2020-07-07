@@ -13,5 +13,5 @@ public class Server {
     private String snapShotName;
 
     private Map<CommandEnum,String> commands;
-    
+
 }

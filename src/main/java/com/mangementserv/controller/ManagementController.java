@@ -43,6 +43,10 @@ public class ManagementController {
         if(server != null) {
             String actionCommand = server.getCommands().get(serverActionVo.getAction());
             try {
+                if(serverActionVo.getAction().equals(CommandEnum.STOP)) {
+                    String runningPid = getRunningProcessId(server);
+                    actionCommand = actionCommand.replace(":runningPid",runningPid);
+                }
                 executeActionCommand(actionCommand);
                 return new ResponseEntity<>("",HttpStatus.ACCEPTED);
             } catch (IOException | InterruptedException e) {
@@ -90,7 +94,7 @@ public class ManagementController {
     }
 
     private StatusEnum checkProcessRunning(Server server, String runningPid) throws IOException {
-        String command = server.getCommands().get(CommandEnum.CHECK)+runningPid;
+        String command = server.getCommands().get(CommandEnum.CHECK).replace(":runningPid",runningPid);
         Process process = Runtime.getRuntime().exec(command);
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(process.getInputStream()));
