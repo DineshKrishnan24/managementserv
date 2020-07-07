@@ -1,7 +1,7 @@
 package com.mangementserv.enumaration;
 
-public enum CommandTypeEnum {
-    RUN,
+public enum CommandEnum {
+    CHECK,
     START,
     RESTART,
     STOP;

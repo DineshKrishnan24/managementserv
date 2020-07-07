@@ -1,0 +1,31 @@
+[
+  {
+    "name": "serv1",
+    "snapShotName": "procurementserv-1.0-SNAPSHOT",
+    "commands": {
+      "CHECK":"",
+      "START": "",
+      "RESTART": "",
+      "STOP": ""
+    }
+  },
+  {
+    "name": "serv2",
+    "commands": {
+      "CHECK":"",
+      "START": "",
+      "RESTART": "",
+      "STOP": ""
+    }
+  },
+  {
+    "name": "serv3",
+    "commands": {
+      "CHECK":"",
+      "START": "",
+      "RESTART": "",
+      "STOP": ""
+    }
+
+  }
+]

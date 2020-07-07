@@ -1,6 +1,6 @@
 package com.mangementserv.model;
 
-import com.mangementserv.enumaration.CommandTypeEnum;
+import com.mangementserv.enumaration.CommandEnum;
 import lombok.Data;
 
 import java.util.Map;
@@ -8,12 +8,10 @@ import java.util.Map;
 @Data
 public class Server {
 
-    private int id;
-
     private String name;
 
     private String snapShotName;
 
-    private Map<CommandTypeEnum,String> commands;
-
+    private Map<CommandEnum,String> commands;
+    
 }
